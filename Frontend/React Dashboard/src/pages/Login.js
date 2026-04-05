@@ -17,7 +17,8 @@ function Login() {
         localStorage.setItem("token", res.data.token);
         alert("Login successful 🚀");
         } catch (err) {
-        alert("Login failed ❌");
+        console.log(err.response?.data);    
+        alert(err.response?.data || "Login failed ❌");
         }
     };
 
